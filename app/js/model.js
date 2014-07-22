@@ -2,7 +2,7 @@
   window.List = function(db) {
     var items, self;
     db = db || DB('generator-riotjs');
-    self = $.observable(this);
+    self = riot.observable(this);
     items = db.get();
     self.add = function(str) {
       var item;

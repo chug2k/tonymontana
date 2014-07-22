@@ -1,6 +1,6 @@
 window.List = (db) ->
-  db = db || DB('generator-riotjs');
-  self = $.observable(this)
+  db = db || DB('generator-riotjs')
+  self = riot.observable(this)
   items = db.get()
   self.add = (str) ->
     item =

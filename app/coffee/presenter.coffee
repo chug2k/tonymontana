@@ -1,7 +1,7 @@
 
 list = new List()
-template = $("[type='html/list']").html();
-root = $("#list");
+template = $("[type='html/list']").html()
+root = $("#list")
 $('#add_item').click ->
   str = $.trim($('#new_item').val())
   list.add(str)
@@ -9,16 +9,16 @@ $('#add_item').click ->
 
 
 $("#new_item").keyup (e) ->
-  str = $.trim(this.value);
+  str = $.trim(this.value)
   if (e.which == 13 && str)
-    list.add(str);
-    this.value = "";
+    list.add(str)
+    this.value = ""
 
 
 add = (item) ->
-  $($.render(template, item)).appendTo(root);
+  $(riot.render(template, item)).appendTo(root)
 
-list.on("add", add);
+list.on("add", add)
 
 
 

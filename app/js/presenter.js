@@ -24,7 +24,7 @@
   });
 
   add = function(item) {
-    return $($.render(template, item)).appendTo(root);
+    return $(riot.render(template, item)).appendTo(root);
   };
 
   list.on("add", add);

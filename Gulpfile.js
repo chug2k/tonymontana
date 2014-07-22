@@ -51,11 +51,11 @@ gulp.task('server', function() {
   gulp.watch(coffeeWatchFiles, ['coffee']);
   gulp.watch(nibWatchFiles, ['nib']);
   var watchFiles = ['app/index.html', 'app/css/**/*.css', 'app/js/**/*.js'];
-//  gulp.watch(watchFiles, function(e) {
-//    console.log('Files changed. Reloading...');
-//    gulp.src(watchFiles)
-//        .pipe(livereload(lrs));
-//  });
+  gulp.watch(watchFiles, function(e) {
+    console.log('Files changed. Reloading...');
+    gulp.src(watchFiles)
+        .pipe(livereload(lrs));
+  });
 
   gulp.run('http-server');
 });
