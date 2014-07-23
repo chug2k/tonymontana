@@ -41,26 +41,22 @@
 }).call(this);
 
 (function() {
-  this.Promise = (function() {
-    function Promise(fn) {
-      var self;
-      self = riot.observable(this);
-      ['done', 'fail', 'always'].map((function(_this) {
-        return function(name) {
-          return self[name] = function(arg) {
-            if ($.isFunction(arg)) {
-              return self.on(name, arg);
-            } else {
-              return self.trigger(name, arg);
-            }
-          };
-        };
-      })(this));
-    }
+  
+// A generic promiese interface by using riot.observable
 
-    return Promise;
+function Promise(fn) {
+  var self = riot.observable(this);
 
-  })();
+  $.map(['done', 'fail', 'always'], function(name) {
+    self[name] = function(arg) {
+      return self[$.isFunction(arg) ? 'on' : 'trigger'](name, arg);
+    };
+  });
+
+}
+
+;
+
 
 }).call(this);
 
