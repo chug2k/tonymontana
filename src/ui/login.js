@@ -1,7 +1,7 @@
 
 // Login and logout features
 
-admin(function(app) {
+tony(function(app) {
 
   var user = app.user,
     loading = "is-loading";

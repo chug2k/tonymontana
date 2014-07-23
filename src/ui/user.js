@@ -1,6 +1,6 @@
 
 // Presenter for single user
-admin(function(app) {
+tony(function(app) {
 
   var root = $("#user-page"),
     tmpl = $("#user-tmpl").html();

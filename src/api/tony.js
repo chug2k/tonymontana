@@ -1,6 +1,6 @@
 
-// The admin API
-function Admin(conf) {
+// The tony API
+function Tony(conf) {
 
   var self = riot.observable(this),
       backend = new Backend(conf);
@@ -9,7 +9,6 @@ function Admin(conf) {
 
   // load a given page from the server
   self.load = function(page, fn) {
-
     self.trigger("before:load", page);
 
     self.one("load", fn);

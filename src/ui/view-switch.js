@@ -3,7 +3,7 @@
   Handle view switching, aka. "routing"
   The transition effect is done with CSS
 */
-admin(function(app) {
+tony(function(app) {
 
   var is_active = "is-active";
 

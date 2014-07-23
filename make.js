@@ -31,7 +31,7 @@ function concat() {
   js+= cat(["src/ext/*.js", "src/ui/*.js"]);
 
   // dist
-  js.to("dist/admin.js");
+  js.to("dist/tony.js");
 
 }
 

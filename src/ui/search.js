@@ -1,6 +1,6 @@
 
 // Search dropdown
-admin(function(app) {
+tony(function(app) {
 
   var form = $("#search"),
       tmpl = $("#result-tmpl").html(),

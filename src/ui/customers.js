@@ -1,6 +1,6 @@
 
 // Presenter for customer list
-admin(function(app) {
+tony(function(app) {
 
   var root = $("#bars", app.root),
     tmpl = $("#bars-tmpl").html();

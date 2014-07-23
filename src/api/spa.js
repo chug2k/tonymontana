@@ -3,22 +3,22 @@
 
 var instance;
 
-top.admin = riot.observable(function(arg) {
+top.tony = riot.observable(function(arg) {
 
-  // admin() --> return instance
+  // tony() --> return instance
   if (!arg) return instance;
 
-  // admin(fn) --> add a new module
+  // tony(fn) --> add a new module
   if ($.isFunction(arg)) {
-    top.admin.on("ready", arg);
+    top.tony.on("ready", arg);
 
-  // admin(conf) --> initialize the application
+  // tony(conf) --> initialize the application
   } else {
 
-    instance = new Admin(arg);
+    instance = new Tony(arg);
 
     instance.on("ready", function() {
-      top.admin.trigger("ready", instance);
+      top.tony.trigger("ready", instance);
     });
 
   }

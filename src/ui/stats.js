@@ -1,6 +1,6 @@
 
 // Presenter for stats (the line graphs, see ext/graph.js)
-admin(function(app) {
+tony(function(app) {
 
   var canvas = $("canvas", app.root),
       colors = ['#be0000', '#4cbe00', '#1fadc5'];
