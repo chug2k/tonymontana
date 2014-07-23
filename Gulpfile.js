@@ -6,6 +6,7 @@ var connect = require('connect');
 var coffee = require('gulp-coffee');
 var stylus = require('gulp-stylus');
 var nib = require('nib');
+var concat = require('gulp-concat');
 
 
 var WEB_PORT = 9000;
@@ -32,6 +33,7 @@ gulp.task('http-server', function() {
 gulp.task('coffee', function() {
   gulp.src('app/coffee/**/*.coffee')
       .pipe(coffee().on('error', gutil.log))
+      .pipe(concat('app.js'))
       .pipe(gulp.dest('app/js'))
 });
 

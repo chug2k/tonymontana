@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="css/main.css">
     </head>
 
-    <script type="html/list">
+    <script type="text/template" id="t__list-item">
         <li>
             <div class="view">
                 <p>{desc}</p>
@@ -18,17 +18,24 @@
     <body>
         <h1>Riot! JS App!</h1>
 
-        <div class="add_items">
-            <span><input type="text" id="new_item" placeholder="Add new item ..."></span>
-            <span> <input type="button" id="add_item" value="add"></span>
+        <div class="add-items">
+            <span><input type="text" id="new-item" placeholder="Add new item ..."></span>
+            <span> <input type="button" id="add-item" value="add"></span>
         </div>
 
         <ul id="list"></ul>
 
         <script src="bower_components/jquery/jquery.min.js"></script>
-        <script src="bower_components/riotjs/riot.min.js"></script>
-        <script src="js/store.js"></script>
-        <script src="js/model.js"></script>
-        <script src="js/presenter.js"></script>
+        <script src="bower_components/riotjs/riot.js"></script>
+        <script src="js/app.js"></script>
+        <script>
+          tony({
+            page: location.hash.slice(2),
+            root: $("body"),
+            debug: true,
+            cache: false
+          });
+        </script>
+
     </body>
 </html>
