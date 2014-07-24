@@ -11,4 +11,5 @@ SCHEDULER.every '30s' do
   points << { x: last_x, y: rand(50) }
 
   send_event('convergence', points: points)
+
 end

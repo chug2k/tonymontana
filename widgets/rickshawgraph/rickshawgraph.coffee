@@ -96,6 +96,7 @@ class Dashing.Rickshawgraph extends Dashing.Widget
   # Handle new data from Dashing.
   onData: (data) ->
     series = @_parseData data
+    @xAxisLabels = data.xAxisLabels
 
     if @graph
       # Remove the existing graph if the number of series has changed or any names have changed.
@@ -174,10 +175,19 @@ class Dashing.Rickshawgraph extends Dashing.Widget
     xAxisOptions =  {
       graph: graph
     }
+
     if Rickshaw.Fixtures.Time.Local
       xAxisOptions.timeFixture = new Rickshaw.Fixtures.Time.Local()
 
-    x_axis = new Rickshaw.Graph.Axis.Time xAxisOptions
+    if @xAxisLabels?
+      xAxis = new Rickshaw.Graph.Axis.X
+        graph: graph
+        tickFormat: (n) => return @xAxisLabels[n]
+    else
+      x_axis = new Rickshaw.Graph.Axis.Time xAxisOptions
+
+
+
     y_axis = new Rickshaw.Graph.Axis.Y(graph: graph, tickFormat: Rickshaw.Fixtures.Number.formatKMBT)
 
     if @get("legend")
@@ -192,6 +202,8 @@ class Dashing.Rickshawgraph extends Dashing.Widget
     if @get("hover")
       hoverDetail = new Rickshaw.Graph.HoverDetail {
         graph: graph
+        xFormatter: (x) -> x
+        yFormatter: (y) -> y
       }
 
     return graph
