@@ -1,0 +1,62 @@
+// ----------------------------------------------------------------------------
+// Sass declarations
+// ----------------------------------------------------------------------------
+$background-color:  #55618c;
+
+$title-color:       rgba(255, 255, 255, 0.7);
+$moreinfo-color:    rgba(255, 255, 255, 0.7);
+
+// ----------------------------------------------------------------------------
+// Widget-text styles
+// ----------------------------------------------------------------------------
+.widget-americamap {
+
+  background-color: $background-color;
+
+  .title {
+    color: $title-color;
+  }
+  .value {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+  }
+
+  .more-info {
+    color: $moreinfo-color;
+  }
+
+  .updated-at {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .progress-bar {
+    background-color: #1a1a1a;
+    height: 25px;
+    padding: 5px;
+    width: 350px;
+    margin: 50px 0;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;
+
+    position: absolute;
+    bottom: 65px;
+    left: 140px;
+    text-align: left;
+  }
+
+  .progress-bar span {
+    display: inline-block;
+    height: 100%;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+    transition: width .4s ease-in-out;
+    background-color: white;
+  }
+
+  .percentage-text {
+    position: absolute;
+    bottom: 80px;
+    width: 100%;
+  }
+}

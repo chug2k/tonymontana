@@ -1,5 +1,5 @@
 # :first_in sets how long it takes before the job is first run. In this case, it is run immediately
-SCHEDULER.every '5s', :first_in => 0 do |job|
+SCHEDULER.every '300s', :first_in => 0 do |job|
   num_classes = 30
   num_classes_last = 10
   cost_per_class = 20.0
@@ -33,7 +33,7 @@ SCHEDULER.every '5s', :first_in => 0 do |job|
     datasets: [
         {
             label: "My First dataset",
-            fillColor: "rgba(220,220,220,0.2)",
+            fillColor: "rgba(220,220,220,0.8)",
             strokeColor: "rgba(220,220,220,1)",
             pointColor: "rgba(220,220,220,1)",
             pointStrokeColor: "#fff",
@@ -44,7 +44,40 @@ SCHEDULER.every '5s', :first_in => 0 do |job|
     ]
   }
 
-  send_event('attendance_by_class', data);
+  send_event('attendance_by_class', data)
+
+
+  group_data = [
+      {
+          value: 10,
+          color:"#F7464A",
+          highlight: "#FF5A5E",
+          label: "Engineering"
+      },
+      {
+          value: 5,
+          color: "#46BFBD",
+          highlight: "#5AD3D1",
+          label: "Marketing"
+      },
+      {
+          value: 1,
+          color: "#FDB45C",
+          highlight: "#FFC870",
+          label: "Leadership"
+      },
+      {
+          value: 8,
+          color: "#949FB1",
+          highlight: "#A8B3C5",
+          label: "Operations"
+      }
+
+  ]
+  send_event('attendance_by_group', {dataset: group_data})
+
+
+
 
 
 end

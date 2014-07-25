@@ -20,35 +20,47 @@
       <div data-id="leaderboard" data-view="List" data-unordered="false" data-title="Leaderboard" data-moreinfo="# of attendances"></div>
     </li>
 
-    <li data-row="2" data-col="1" data-sizex="3" data-sizey="1">
+    <li data-row="2" data-col="1" data-sizex="2" data-sizey="1">
       <div data-id="attendance_by_class"
            data-view="Chartjs"
-           data-hover="true"
-           data-clear-always="true"
            data-title="Class Attendance"
-           data-renderer="bar"
+           data-type="bar"
            style="background-color:#ff9618">
-
       </div>
     </li>
 
+
+    <li data-row="2" data-col="3" data-sizex="1" data-sizey="1">
+      <div data-id="attendance_by_group"
+           data-view="Chartjs"
+           data-type="polar"
+           data-title="By Group"
+           style="background-color:#3AAE40">
+      </div>
+    </li>
     <li data-row="3" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="cost_month" data-view="Number" data-title="Investment" data-moreinfo="this month" data-prefix="$"></div>
-    </li>
-    <li data-row="3" data-col="2" data-sizex="1" data-sizey="1">
-      <div data-id="cost_calorie" data-view="Number" data-title="Cost per Calorie" data-moreinfo="this month" data-prefix="$"></div>
-    </li>
-    <li data-row="3" data-col="3" data-sizex="1" data-sizey="1">
       <div data-id="calories_burned" data-view="Number" data-title="Calories Burned" data-moreinfo="vs last week"></div>
     </li>
+    <li data-row="3" data-col="2" data-sizex="2" data-sizey="1">
+      <div data-id="distance_traveled"
+           data-view="Americamap"
+           data-value="927.04 miles"
+           data-title="Calories Burned"
+           data-image="/usa_topo_small.png">
 
+     </div>
+    </li>
     <li data-row="3" data-col="4" data-sizex="1" data-sizey="1">
       <div data-id="steps_taken" data-view="Number" data-title="Steps Taken" data-moreinfo="vs last week"></div>
     </li>
 
-    <li data-row="4" data-col="3" data-sizex="2" data-sizey="1">
-      <div data-id="popular_class" data-view="Text" data-title="Most Popular Class" data-text="Dolores Park Bootcamp" data-moreinfo="8 attended" data-prefix="$"></div>
+    <li data-row="4" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="cost_month" data-view="Number" data-title="Investment" data-moreinfo="this month" data-prefix="$"></div>
     </li>
+    <li data-row="4" data-col="2" data-sizex="1" data-sizey="1">
+      <div data-id="cost_calorie" data-view="Number" data-title="Cost per Calorie" data-moreinfo="this month" data-prefix="$"></div>
+    </li>
+
 
   </ul>
   <center><div style="font-size: 12px">Try this: curl -d '{ "auth_token": "YOUR_AUTH_TOKEN", "text": "Hey, Look what I can do!" }' \http://<%=request.host%>:<%=request.port%>/widgets/welcome</div></center>
