@@ -1,5 +1,5 @@
 # :first_in sets how long it takes before the job is first run. In this case, it is run immediately
-SCHEDULER.every '300s', :first_in => 0 do |job|
+SCHEDULER.every '5s', :first_in => 0 do |job|
   num_classes = 30
   num_classes_last = 10
   cost_per_class = 20.0
