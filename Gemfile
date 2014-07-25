@@ -2,4 +2,4 @@ source 'https://rubygems.org'
 
 gem 'dashing'
 
-gem 'passenger'
+gem 'unicorn'
