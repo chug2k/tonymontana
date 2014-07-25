@@ -1,0 +1,16 @@
+<h1 class="title" data-bind="title"></h1>
+
+<h2 class="value" data-bind="value | shortenedNumber | prepend prefix | append suffix"></h2>
+
+<ul class="list-nostyle picto-wrapper">
+  <li data-foreach-item="items">
+    <img data-bind-src="image | prepend '/assets'"
+         data-bind-width="width"
+         data-bind-height="height"
+    />
+  </li>
+</ul>
+
+
+
+<p class="updated-at" data-bind="className"></p>

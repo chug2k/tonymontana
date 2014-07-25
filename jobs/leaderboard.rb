@@ -7,5 +7,9 @@ SCHEDULER.every '3s' do
     leaderboard << {label: person, value: i}
   end
 
+  # rand(10).times do |i|
+  #   leaderboard << { label: people[i], value: rand(100)}
+  # end
+
   send_event('leaderboard', { items: leaderboard })
 end

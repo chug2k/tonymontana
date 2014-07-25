@@ -1,6 +1,6 @@
 class Dashing.Chartjs extends Dashing.Widget
 
-  ready: () ->
+  ready: ->
     $canvas = $('canvas', $(@node))
 
     # Wow, this is shitty.
