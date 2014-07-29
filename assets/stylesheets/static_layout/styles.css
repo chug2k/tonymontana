@@ -285,6 +285,7 @@ footer{
   margin-bottom: 40px;
 }
 
-button:focus{
-
+a.dark-link {
+    color: blue;
+    text-decoration: none;
 }
