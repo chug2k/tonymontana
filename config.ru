@@ -19,6 +19,13 @@ configure do
   # In this case, we want our route for '/' to come first, so we put it at the front of the routes array. hacky? yeah
   Sinatra::Application.routes["GET"].unshift(Sinatra::Application.routes["GET"].pop)
 
+  get '/faq' do
+    erb 'faq'.to_sym, layout: :static_layout
+  end
+
+  Sinatra::Application.routes["GET"].unshift(Sinatra::Application.routes["GET"].pop)
+
+
 end
 
 map Sinatra::Application.assets_prefix do
