@@ -130,11 +130,12 @@ section{
   padding: 100px 0px 80px 0px;
 }
 
-#clients{
+#team{
   background-color: #f7931e;
+  color: #fff;
 }
 
-#clients h2{
+#team h2, #team h3, #team h4, #team h5{
   color: #fff;
 }
 
@@ -175,6 +176,7 @@ h3{
 .jobContainer{
   padding: 20px 30px 10px 30px;
   height: 75px;
+  border-color: white;
 }
 
 .solutionDesc button{

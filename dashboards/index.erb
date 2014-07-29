@@ -12,7 +12,7 @@
       <div class="twelve columns offset-by-two">
         <ul id="menu">
           <li><a href="#feature1">Features</a></li>
-          <li><a href="#solutions">Solutions</a></li>
+          <li><a href="#solutions">Pricing</a></li>
           <li><a href="#clients">Clients</a></li>
           <li><a href="#team">Team</a></li>
           <li><a href="#contact">Contact Us</a></li>
@@ -30,7 +30,9 @@
         jQuery("h1").fitText(1.2, { minFontSize: '20px', maxFontSize: '40px' })
       </script>
       <p>Access to group classes all over the city. With no commitment.</p>
-      <button>Learn More</button>
+      <a href="#contact">
+        <button>Learn More</button>
+      </a>
     </div>
   </div>
 </section>
@@ -54,7 +56,7 @@
       <img src="/assets/static_layout/imac.png" alt="imac">
       <div class="eleven columns offset-by-five feature-text">
         <h2>Understand your investment.</h2>
-        <p>The value of adding benefitsasdfasfdasdf to your company shouldn’t be a mystery. FitStack’s dashboard brings powerful metrics to your fingertips. See the utilization rate of your investment and how much your company gains (or loses if counting calories) from our services.</p>
+        <p>The value of adding benefits to your company shouldn’t be a mystery. FitStack’s dashboard brings powerful metrics to your fingertips. See the utilization rate of your investment and how much your company gains (or loses if counting calories) from our services.</p>
       </div>
     </div>
   </div>
@@ -75,7 +77,9 @@
           <ul>
             <li>No commitment. Ever.</li>
           </ul>
-          <button name="submit">Sign Up</button>
+          <a href="#contact">
+            <button name="submit">Sign Up</button>
+          </a>
         </div>
       </div>
       <div class="one-third column">
@@ -88,7 +92,9 @@
             <li>100 group session passes</li>
             <li>$2300/month</li>
           </ul>
-          <button name="submit">Sign Up</button>
+          <a href="#contact">
+            <button name="submit">Sign Up</button>
+          </a>
         </div>
       </div>
       <div class="one-third column">
@@ -102,7 +108,9 @@
             <li>320 group session access passes</li>
             <li>$4480/month or 1 catered lunch plus happy hour</li>
           </ul>
-          <button name="submit">Sign Up</button>
+          <a href="#contact">
+            <button name="submit">Sign Up</button>
+          </a>
         </div>
       </div>
       <div class="sixteen columns">
@@ -111,15 +119,15 @@
     </div>
   </div>
 </section>
-<section id="clients">
-  <div class="container">
-    <div class="row">
-      <div class="sixteen columns">
-        <h2>Our Clients</h2>
-      </div>
-    </div>
-  </div>
-</section>
+<!--<section id="clients">-->
+  <!--<div class="container">-->
+    <!--<div class="row">-->
+      <!--<div class="sixteen columns">-->
+        <!--<h2>Our Clients</h2>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</section>-->
 <section id="team">
   <div class="container">
     <div class="row">
@@ -129,31 +137,31 @@
     </div>
     <div class="row">
       <div class="four columns">
-        <img class="scale-with-grid" src="/assets/static_layout/clee.png" alt="Charles Lee"/>
+        <img class="scale-with-grid" src="/assets/static_layout/clee.jpg" alt="Charles Lee"/>
         <div class="jobContainer">
           <h4>Charles Lee</h4>
-          <h5>Job Title</h5>
+          <h5>Engineering</h5>
         </div>
       </div>
       <div class="four columns">
-        <img class="scale-with-grid" src="/assets/static_layout/jpark.png" alt="James Park"/>
+        <img class="scale-with-grid" src="/assets/static_layout/jpark.jpg" alt="James Park"/>
         <div class="jobContainer">
           <h4>James Park</h4>
-          <h5>Job Title</h5>
+          <h5>Operations</h5>
         </div>
       </div>
       <div class="four columns">
-        <img class="scale-with-grid" src="/assets/static_layout/gbianchi.png" alt="Gregory Bianchi"/>
+        <img class="scale-with-grid" src="/assets/static_layout/gbianchi.jpg" alt="Gregory Bianchi"/>
         <div class="jobContainer">
           <h4>Gregory Bianchi</h4>
-          <h5>Job Title</h5>
+          <h5>Fitness</h5>
         </div>
       </div>
       <div class="four columns">
-        <img class="scale-with-grid" src="/assets/static_layout/ghaylett.png" alt="Gemma Haylett"/>
+        <img class="scale-with-grid" src="/assets/static_layout/ghaylett.jpg" alt="Gemma Haylett"/>
         <div class="jobContainer">
           <h4>Gemma Haylett</h4>
-          <h5>Designer</h5>
+          <h5>Design</h5>
         </div>
       </div>
     </div>
@@ -168,16 +176,16 @@
       </div>
       <form action="/contact" method="post">
         <div class="eight columns">
-          <input type="text" name="fname" value="First Name">
+          <input type="text" name="name" placeholder="Name">
         </div>
         <div class="eight columns">
-          <input type="text" name="lname" value="Last Name">
+          <input type="text" name="company" placeholder="Company">
         </div>
         <div class="eight columns">
-          <input type="email" name="email" value="Email">
+          <input type="email" name="email" placeholder="Email">
         </div>
         <div class="eight columns">
-          <input type="text" name="phoneNum" value="Phone Number">
+          <input type="text" name="phoneNum" placeholder="Phone Number">
         </div>
         <div class="four columns offset-by-six">
           <button name="submit">Send</button>
@@ -194,10 +202,11 @@
 
 
 <script>
-  $(".hero").backstretch("/assets/static_layout/hero.jpg");
 
   $(function(){
     $('#menu').slicknav();
+    $(".hero").backstretch("/assets/static_layout/hero.jpg");
+    $("a").smoothScroll();
   });
 </script>
 
