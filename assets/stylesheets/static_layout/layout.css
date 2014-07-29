@@ -1,0 +1,233 @@
+/*
+* Skeleton V1.2
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+
+/* Table of Content
+==================================================
+	#Site Styles
+	#Page Styles
+	#Media Queries
+	#Font-Face */
+
+/* #Site Styles
+================================================== */
+
+/* #Page Styles
+================================================== */
+
+/* #Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {
+		.solutionHeader h3{
+			padding: 15px 50px 60px 50px;
+		}
+
+		.price{
+			left: 70px;
+		}
+
+		.solutionDesc{
+			height: 165px;
+		}
+
+		.jobContainer{
+			padding: 10px 20px;
+		}
+
+		#contact p{
+			margin: 30px 0px;
+		}
+
+		.hero p{
+			margin: 10px 0px;
+			line-height: 25px;
+		}
+
+		.feature-text{
+			margin-top: 10px;
+		}
+
+		h1 span{
+			padding-bottom: 5px;
+		}
+
+	}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {
+			.price{
+				left: 155px;
+				top: 60px;
+			}
+
+			.solutionDesc{
+				height: auto;
+				margin-bottom: 40px;
+				padding: 70px 15px;
+			}
+
+			.solutionHeader h3{
+				padding: 15px 50px 60px 50px;
+			}
+
+			.hero p{
+				margin: 10px 0px;
+				line-height: 25px;
+			}
+
+			#feature2 img{
+			  position: static;
+			  display: inline-block;
+			  width: 90%;
+			}
+
+			#feature1 h2,
+			#feature2 h2,
+			#feature1 p,
+			#feature2 p{
+				text-align: center;
+			}
+
+			#feature1 img{
+				margin-top: 60px;
+				margin-left: 28%;
+			}
+
+			#feature2 img{
+				margin-bottom: 60px;
+				margin-left: 7%;
+			}
+
+	}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+		.navBar {
+			display:none;
+		}
+		
+		.slicknav_menu {
+			display:block;
+		}
+
+		.hero{
+			margin-top: 0px;
+		}
+
+		input[type="text"],
+		input[type="email"]{
+			width: 98%;
+		}
+	
+	}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {
+		.price{
+				left: 95px;
+				top: 85px;
+			}
+
+		.solutionHeader h3{
+				padding: 15px 90px 60px 90px;
+		}
+
+		#feature1 h2,
+		#feature2 h2,
+		#feature1 p,
+		#feature2 p{
+			text-align: center;
+		}
+
+		.solutionDesc{
+			padding: 55px 25px;
+		}
+
+		.solutionDesc button{
+			margin-bottom: 10px;
+		}
+
+		.navBar {
+			display:none;
+		}
+		
+		.slicknav_menu {
+			display:block;
+		}
+
+		.hero{
+			margin-top: 0px;
+		}
+
+		h1{
+			margin-bottom: 0px;
+			line-height: 45px;
+		}
+
+		p,
+		#solutions p,
+		#contact p{
+			font-size: 15px;
+			line-height: 27px;
+			margin: 20px 0px
+		}
+
+		h2{
+			font-size: 25px;
+			line-height: 35px;
+		}
+
+		#feature1 img{
+			width: 50%;
+			margin-top: 40px;
+		}
+
+		#feature2 img{
+			position: static;
+			width: 100%;
+			margin: 20px 0px;
+		}
+
+		#team img{
+			margin-top: 18px;
+		}
+
+		h1 span{
+			padding-bottom: 5px;
+		}
+
+		input[type="text"],
+		input[type="email"]{
+			width: 98%;
+		}
+	}
+
+
+/* #Font-Face
+================================================== */
+/* 	This is the proper syntax for an @font-face file
+		Just create a "fonts" folder at the root,
+		copy your FontName into code below and remove
+		comment brackets */
+
+/*	@font-face {
+	    font-family: 'FontName';
+	    src: url('../fonts/FontName.eot');
+	    src: url('../fonts/FontName.eot?iefix') format('eot'),
+	         url('../fonts/FontName.woff') format('woff'),
+	         url('../fonts/FontName.ttf') format('truetype'),
+	         url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
+	    font-weight: normal;
+	    font-style: normal; }
+*/

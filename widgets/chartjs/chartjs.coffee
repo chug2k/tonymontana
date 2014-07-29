@@ -20,6 +20,7 @@ class Dashing.Chartjs extends Dashing.Widget
         datasets: @get('datasets')
 
 
+
   onData: (data) ->
     @.renderGraph(data)
 

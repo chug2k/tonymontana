@@ -1,5 +1,6 @@
 /*
-  //=require_directory .
+  //=require ./font-awesome
+  .=require ./jquery.gridster
   //=require_tree ../../widgets
 */
 // ----------------------------------------------------------------------------
@@ -233,14 +234,14 @@ h3 {
 }
 
 #lean_overlay {
-    position: fixed;
-    z-index:100;
-    top: 0px;
-    left: 0px;
-    height:100%;
-    width:100%;
-    background: #000;
-    display: none;
+  position: fixed;
+  z-index:100;
+  top: 0px;
+  left: 0px;
+  height:100%;
+  width:100%;
+  background: #000;
+  display: none;
 }
 
 #container {
@@ -254,4 +255,3 @@ h3 {
 .clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
-
