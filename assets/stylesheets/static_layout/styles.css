@@ -168,7 +168,7 @@ h3{
   border-width: 1px;
   height: 140px;
   position: relative;
-  padding: 63px 25px;
+  padding: 90px 25px;
   text-align: center;
   border-top: none;
 }
@@ -204,7 +204,7 @@ h4{
   padding: 30px 15px;
   border-radius: 50%;
   position: absolute;
-  top: 90px;
+  top: 60px;
   left: 98px;
   color: #FFF;
   font-size: 27px;
@@ -214,10 +214,16 @@ h4{
 
 .price span{
   font-size: 16px;
+    display: inline-block;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+
 }
 
 .solutionHeader h3{
-  padding: 15px 90px 60px 90px;
+  /*padding: 15px 90px 60px 90px;*/
+    padding-top: 15px;
   margin: 0;
 }
 
@@ -253,6 +259,7 @@ a:visited{
 
 #team img{
   margin-bottom: -7px;
+  width: 100%;
 }
 
 .feature-text{
