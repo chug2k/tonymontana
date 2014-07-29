@@ -1,4 +1,5 @@
 require 'dashing'
+require 'mandrill'
 
 configure do
   set :auth_token, 'YOUR_AUTH_TOKEN'
@@ -24,6 +25,33 @@ configure do
   end
 
   Sinatra::Application.routes["GET"].unshift(Sinatra::Application.routes["GET"].pop)
+
+  post '/contact' do
+    m = Mandrill::API.new('YjmkuIiDdE6ItQ02CTMPoQ')
+    message = {
+        :subject=> "Contact from from #{params[:name]}",
+        :from_name=> "FitStack Landing Page",
+        :text=> params.to_s,
+        :to=>[
+            {
+                :email=> "charles@fitbookr.com",
+                :name=> "Charles"
+            },
+            {
+                :email=> "james@fitbookr.com",
+                :name=> "JamJams Park"
+            }
+        ],
+        :from_email => 'charles@fitstack.co'
+    }
+    sending = m.messages.send message
+    if sending && sending.status == 'sent'
+      200
+    else
+      422
+    end
+
+  end
 
 
 end

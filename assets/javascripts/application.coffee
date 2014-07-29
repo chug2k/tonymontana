@@ -3,6 +3,7 @@
 #= require dashing.js
 
 #= require_directory .
+#= require_directory ./static_layout
 
 #= require_tree ../../widgets
 
