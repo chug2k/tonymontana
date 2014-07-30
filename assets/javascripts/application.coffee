@@ -2,9 +2,10 @@
 # It includes jquery & batman for you.
 #= require dashing.js
 
-#= require_directory .
-#= require_directory ./static_layout
-
+#= require_directory ./gridster
+#= require ./Chart.js
+#= require ./dashing.gridster
+#= require ./jquery.knob
 #= require_tree ../../widgets
 
 console.log("Yeah! The dashboard has started!")
