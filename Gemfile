@@ -5,3 +5,5 @@ gem 'dashing'
 gem 'unicorn'
 
 gem 'mandrill-api'
+
+gem 'httparty'

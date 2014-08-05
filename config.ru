@@ -1,5 +1,6 @@
 require 'dashing'
 require 'mandrill'
+require 'httparty'
 
 configure do
   set :auth_token, 'YOUR_AUTH_TOKEN'
@@ -14,17 +15,26 @@ configure do
   end
 
   get '/' do
-    erb 'index'.to_sym, layout: :static_layout
+    erb :index, layout: :static_layout
   end
   # Sinatra doesn't support overriding routes. The routes are evaluated first come first serve.
   # In this case, we want our route for '/' to come first, so we put it at the front of the routes array. hacky? yeah
   Sinatra::Application.routes["GET"].unshift(Sinatra::Application.routes["GET"].pop)
 
   get '/faq' do
-    erb 'faq'.to_sym, layout: :static_layout
+    erb :faq, layout: :static_layout
   end
 
   Sinatra::Application.routes["GET"].unshift(Sinatra::Application.routes["GET"].pop)
+
+  get '/password_reset/:token' do
+    # TODO(Charles): Yes, I realize this is awful. We should be doing this client side.
+    @token = params[:token]
+    erb :password_reset, layout: :static_layout
+  end
+
+  Sinatra::Application.routes["GET"].unshift(Sinatra::Application.routes["GET"].pop)
+
 
   post '/contact' do
     m = Mandrill::API.new('YjmkuIiDdE6ItQ02CTMPoQ')
