@@ -54,7 +54,7 @@ configure do
         :from_email => 'charles@fitstack.co'
     }
     sending = m.messages.send message
-    if sending && sending.status == 'sent'
+    if sending # TODO(Charles): check to see if message was sent.
       200
     else
       422
