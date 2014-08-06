@@ -28,7 +28,6 @@ configure do
   Sinatra::Application.routes["GET"].unshift(Sinatra::Application.routes["GET"].pop)
 
   get '/password_reset/:token' do
-    # TODO(Charles): Yes, I realize this is awful. We should be doing this client side.
     @token = params[:token]
     erb :password_reset, layout: :static_layout
   end
