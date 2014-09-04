@@ -35,6 +35,16 @@ configure do
   Sinatra::Application.routes["GET"].unshift(Sinatra::Application.routes["GET"].pop)
 
 
+  get '/fitbit_access/:user_id' do # TODO(Charles): Should not use naked IDs like this, as it isn't secure.
+    @user_id = params[:user_id]
+    erb :fitbit_access, layout: :static_layout
+  end
+
+  Sinatra::Application.routes["GET"].unshift(Sinatra::Application.routes["GET"].pop)
+
+
+
+
   post '/contact' do
     m = Mandrill::API.new('YjmkuIiDdE6ItQ02CTMPoQ')
     message = {
